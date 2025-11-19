@@ -1,9 +1,9 @@
 package de.hysky.skyblocker.utils;
 
-import ca.weblite.objc.Client;
+//import ca.weblite.objc.Client;
 import com.ibm.icu.text.DateTimePatternGenerator;
 import de.hysky.skyblocker.debug.Debug;
-import net.minecraft.client.MinecraftClient;
+//import net.minecraft.client.MinecraftClient;
 import net.minecraft.util.Util;
 
 import java.text.DecimalFormat;
@@ -100,6 +100,7 @@ public class Formatters {
 	 * @see <a href="https://developer.apple.com/documentation/foundation/nsdateformatter/1408112-dateformatfromtemplate?language=objc">NSDateFormatter</a>
 	 * @see <a href="https://www.unicode.org/reports/tr35/tr35-31/tr35-dates.html#Date_Field_Symbol_Table">Unicode Locale Data Markup Language (LDML)</a>
 	 */
+/*
 	private static boolean is12HourClock() {
 		//The j formatting template returns the preferred formatting for the time
 		//If the format contains a (am/pm pattern) then the preference is to use the 12 hour clock, otherwise its the 24 hour clock
@@ -112,4 +113,9 @@ public class Formatters {
 			return DateTimePatternGenerator.getInstance(Locale.getDefault()).getBestPattern("j").contains("a");
 		}
 	}
+*/
+
+ private static boolean is12HourClock() {
+  return DateTimePatternGenerator.getInstance(Locale.getDefault()).getBestPattern("j").contains("a");
+}
 }
